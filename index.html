@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>i2crm Integration Page</title>
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=109020687', 'ym');
+
+        ym(109020687, 'init', {
+            ssr:true, 
+            webvisor:true, 
+            clickmap:true, 
+            ecommerce:"dataLayer", 
+            referrer: document.referrer, 
+            url: location.href, 
+            accurateTrackBounce:true, 
+            trackLinks:true
+        });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/109020687" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+
+    <style>
+        /* Стили, чтобы кнопка выглядела аккуратно */
+        .contact-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+        }
+        button {
+            border: none;
+            background: none;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        button:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contact-container">
+        <h1>Свяжитесь с нами</h1>
+        
+        <!-- Код кнопки Telegram -->
+        <form action="https://t.me/Kolmakova_kira" method="GET">
+            <button type="submit">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/80px-Telegram_2019_Logo.svg.png" 
+                     width="50" height="50" alt="Напишите нам!">
+            </button>
+        </form>
+    </div>
+
+    <!-- Скрипт i2crm (лучше ставить в конце body) -->
+    <script id="crm-button-script" 
+            src="https://app.i2crm.ru/api_v1/js/crm_button_v2.js" 
+            data-ym-counters="109020687" 
+            data-endpoint="https://app.i2crm.ru/api_v1/metrics/key" 
+            data-text="Номер вашего обращения: {u_code}. Пожалуйста, отправьте это сообщение.">
+    </script>
+
+</body>
+</html>
